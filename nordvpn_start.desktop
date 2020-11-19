@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=NordVPN Controls
+Categories=GTK;GNOME;UtilitY;
+Exec=gnome-terminal -- /home/Path/To/Folder/File/nordvpn.sh
+Icon=/home/Path/To/Folder/File/vpn_connect.ico
+Path=/home/Path/To/Folder/File/nordvpn
+Terminal=true
