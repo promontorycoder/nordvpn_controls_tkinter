@@ -48,7 +48,7 @@ Step 2: Make program files executable
         chmod +x nordvpn.sh
         chmod +x nordvpn_start.desktop
         
-Step 2: Edit files to reflect your directory structure
+Step 3: Edit files to reflect your directory structure
     Open nordvpn.sh into text editor and change line 2 file path to match your
     file structure
     Save and exit file
@@ -57,11 +57,11 @@ Step 2: Edit files to reflect your directory structure
     match your file structure
     Save and exit file
     
-Step 3: Install tkinter if you do not already have it installed.
+Step 4: Install tkinter if you do not already have it installed.
     Open gnome-terminal and execute the following command:
         sudo apt-get install -y python3-tk
         
-Step 4: Copy .desktop file to /usr/share/applications
+Step 5: Copy .desktop file to /usr/share/applications
     Open gnome-terminal and enter the following command:
         sudo cp nordvpn_start.desktop /usr/share/applications
 
