@@ -192,6 +192,8 @@ def vpn_c():
     vpn_cybsec_off()
     time.sleep(1)
     
+    clear_output()
+    
     f = os.popen('nordvpn status')
     for line in f:
         line = line.strip()
@@ -211,6 +213,8 @@ def vpn_c_us():
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
     
+    vpn_status()
+    
     
 def vpn_c_chicago():
 
@@ -222,6 +226,8 @@ def vpn_c_chicago():
         if line:
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
+    
+    vpn_status()
     
     
 def vpn_c_new_york():
@@ -235,6 +241,8 @@ def vpn_c_new_york():
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
     
+    vpn_status()
+    
     
 def vpn_c_miami():
     
@@ -246,6 +254,8 @@ def vpn_c_miami():
         if line:
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
+    
+    vpn_status()
     
 
 def vpn_c_canada():
@@ -259,6 +269,8 @@ def vpn_c_canada():
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
     
+    vpn_status()
+    
 
 def vpn_c_uk():
     
@@ -270,6 +282,8 @@ def vpn_c_uk():
         if line:
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
+    
+    vpn_status()
     
 
 def vpn_d():
@@ -313,6 +327,8 @@ def vpn_disconnect():
     vpn_rate()
     time.sleep(1)
     
+    clear_output()
+    
     g = os.popen('nordvpn settings')
     for line in g:
         line = line.strip()
@@ -347,7 +363,16 @@ def vpn_wl_off():
             text_output_window.insert("end", line + '\n')
     text_output_window.bind("<Return>", get_info)
     
-   
+"""   
+def get_countries():
+    
+    global countries
+    countries = []
+        
+    nord_countries = os.popen("nordvpn countries")
+"""    
+    
+
 def Exit():
     exit()
 
@@ -454,7 +479,8 @@ scrollbar.place(x=900, y=650)
 text_output_window.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=text_output_window.yview, bg='gray7', 
     activebackground='lime green', highlightcolor='lime green', width=15)
+
     
-    
+# get_countries()    
 root.mainloop()
 
